@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --bb-orange:#F2911D; --bb-magenta:#E62B7C; --bb-purple:#5B4BB7;
+    --bb-orange:#F5931F; --bb-magenta:#E62B7C; --bb-purple:#6B4FB8;
     --bb-blue:#3457C4;   --bb-green:#16A05E;
-    --bb-ink:#231F20;    --bb-muted:#6E6A66;  --bb-paper:#FAF8F3;
-    --bb-line:#E9E5DE;
+    --bb-ink:#16181C;    --bb-muted:#5B6068;  --bb-paper:#FAF8F3;
+    --bb-line:#E8E5DF;
   }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body { @apply bg-paper text-ink font-sans antialiased; }
@@ -24,7 +24,7 @@
   /* GIGW 3.0 / WCAG 2.1 AA — the petal colours never carry body text.
      They are for fills, large numerals and eyebrows only. */
   .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[0.16em]; }
-  .shell   { @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-[72px]; }
+  .shell   { @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-shell; }
   .card    { @apply rounded-card bg-white p-6 sm:p-7; }
 }
 

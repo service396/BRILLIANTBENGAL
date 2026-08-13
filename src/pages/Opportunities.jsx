@@ -6,7 +6,7 @@ export default function Opportunities() {
   const items = SECTORS.map((s, i) => ({
     eyebrow: String(i + 1).padStart(2, '0'),
     t: s.t, title: s.name, desc: s.cluster,
-    meta: 'View opportunities', to: `/opportunities/${s.slug}`,
+    meta: 'View opportunities', to: `/sectors/${s.slug}`,
   }))
   return (
     <>

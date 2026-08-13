@@ -11,7 +11,7 @@ export default function SectorDetail() {
       <Section>
         <h1 className="font-display text-3xl font-extrabold">Sector not found</h1>
         <p className="mt-3 text-muted">That sector isn’t in the priority list.</p>
-        <Link to="/opportunities" className="mt-6 inline-block font-semibold text-purple">Back to all sectors →</Link>
+        <Link to="/sectors" className="mt-6 inline-block font-semibold text-purple">Back to all sectors →</Link>
       </Section>
     )
   }
@@ -27,7 +27,7 @@ export default function SectorDetail() {
           { value: '34%', label: 'Below Bengaluru cost base' },
         ]}
       >
-        <Button to="/grid">Open the Grid, filtered</Button>
+        <Button to="/investment-grid">Open the Grid, filtered</Button>
         <Button to="/contact" variant="secondary">Request a meeting</Button>
       </PageHero>
       <Section>

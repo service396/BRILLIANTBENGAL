@@ -1,25 +1,31 @@
-// The Brilliant Bengal mark. Four flat petals — no blend modes, no transparency.
-// The purple is drawn, never produced by overlap.
-export function Mark({ className = 'h-10 w-auto' }) {
+// Brilliant Bengal lockup — Figma node I29:1110;10:7.
+// Mark box is 67×33, gap 12, "BRILLIANT" 10px/2.2px tracking,
+// "bengal" Plus Jakarta Sans ExtraBold 26px/-0.78px tracking.
+//
+// NOTE: the mark itself is a vector export in Figma
+// (I29:1110;2004:7019). This environment's network policy blocks
+// figma.com, so the exported SVG could not be downloaded and the
+// geometry below is a stand-in at the correct box size. Replace
+// src/assets/logo-mark.svg and swap the <svg> for an <img> once the
+// asset is available — nothing else in the lockup needs to change.
+export function Mark({ className = 'h-[33px] w-[67px]' }) {
   return (
-    <svg viewBox="0 0 220 190" className={className} role="img" aria-label="Brilliant Bengal">
-      <path fill="#F2911D" transform="translate(8 60)"  d="M105 115C105 50 60 0 0 5c5 70 45 110 105 110Z" />
-      <path fill="#16A05E" transform="translate(107 60)" d="M0 115C0 50 45 0 105 5c-5 70-45 110-105 110Z" />
-      <path fill="#5B4BB7" transform="translate(72 35)"  d="M38 0c38 45 38 100 0 140C0 100 0 45 38 0Z" />
-      <path fill="#E62B7C" transform="translate(85 30)"  d="M25 0c25 27 25 58 0 85C0 58 0 27 25 0Z" />
+    <svg viewBox="0 0 220 110" className={className} role="img" aria-label="Brilliant Bengal">
+      <path fill="#F5931F" d="M104 108C104 52 62 6 4 10c4 60 42 98 100 98Z" />
+      <path fill="#16A05E" d="M116 108c0-56 42-102 100-98-4 60-42 98-100 98Z" />
+      <path fill="#6B4FB8" d="M110 2c34 34 34 74 0 106-34-32-34-72 0-106Z" />
+      <path fill="#E62B7C" d="M110 16c20 22 20 50 0 72-20-22-20-50 0-72Z" />
     </svg>
   )
 }
 
 export default function Logo({ compact = false }) {
   return (
-    <span className="flex items-center gap-3">
-      <Mark className={compact ? 'h-8 w-auto' : 'h-10 w-auto'} />
-      <span className="leading-none">
-        <span className="block eyebrow text-ink">Brilliant</span>
-        <span className="block font-display font-extrabold tracking-tight text-ink text-[20px] sm:text-[24px] -mt-0.5">
-          bengal
-        </span>
+    <span className="flex items-center gap-[12px]">
+      <Mark className={compact ? 'h-[26px] w-[53px]' : 'h-[33px] w-[67px]'} />
+      <span className="flex flex-col items-start whitespace-nowrap leading-none text-ink">
+        <span className="text-[10px] font-bold tracking-[2.2px]">BRILLIANT</span>
+        <span className="font-display text-[26px] font-extrabold tracking-[-0.78px]">bengal</span>
       </span>
     </span>
   )

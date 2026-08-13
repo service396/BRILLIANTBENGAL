@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 import { Button, Section, SectionHead, CardGrid, Eyebrow, Chip, tone } from '../components/UI.jsx'
 
 const AUDIENCES = [
-  { title: 'Investors', t: 'orange', to: '/grid', meta: 'Explore the Grid',
+  { title: 'Investors', t: 'orange', to: '/investment-grid', meta: 'Explore the Grid',
     desc: 'Search 247 live opportunities across 23 districts. Shortlist projects, request a meeting with the nodal department, and track your file to grounding.' },
-  { title: 'MSMEs', t: 'magenta', to: '/msme/register', meta: 'Register your MSME',
+  { title: 'MSMEs', t: 'magenta', to: '/register', meta: 'Register your MSME',
     desc: 'Register your enterprise, book a certification or finance clinic, showcase an ODOP or GI product, and meet buyers face to face.' },
-  { title: 'Buyers & anchors', t: 'blue', to: '/suppliers', meta: 'Browse suppliers',
+  { title: 'Buyers & anchors', t: 'blue', to: '/chambers-partners', meta: 'Browse suppliers',
     desc: 'Browse verified suppliers by capability and district. Run vendor development programmes and source from Bengal’s clusters.' },
-  { title: 'Global Bengal', t: 'green', to: '/global-bengal', meta: 'Join the network',
+  { title: 'Global Bengal', t: 'green', to: '/chambers-partners', meta: 'Join the network',
     desc: 'Diaspora investors, foreign chambers and bilateral bodies. Partner-country roundtables and cross-border trade sessions.' },
 ]
 
@@ -77,7 +77,7 @@ export default function Home() {
             </dl>
 
             <div className="mt-9 flex flex-wrap gap-3">
-              <Button to="/opportunities">Explore opportunities</Button>
+              <Button to="/sectors">Explore opportunities</Button>
               <Button to="/partners" variant="secondary">Partner with us</Button>
             </div>
           </div>
@@ -137,7 +137,7 @@ export default function Home() {
           <p className="mt-4 text-base text-muted sm:text-lg">Registration opens with the Curtain Raiser in November 2026.</p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Button to="/register">Register</Button>
-            <Button to="/opportunities" variant="secondary">Explore opportunities</Button>
+            <Button to="/sectors" variant="secondary">Explore opportunities</Button>
           </div>
         </div>
       </Section>

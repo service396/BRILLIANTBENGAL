@@ -19,8 +19,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/why-bengal" element={<WhyBengal />} />
-          <Route path="/opportunities" element={<Opportunities />} />
-          <Route path="/opportunities/:slug" element={<SectorDetail />} />
+          <Route path="/sectors" element={<Opportunities />} />
+          <Route path="/sectors/:slug" element={<SectorDetail />} />
           {Object.entries(PAGES).map(([key, p]) => (
             <Route key={key} path={p.path} element={<Simple {...p} />} />
           ))}

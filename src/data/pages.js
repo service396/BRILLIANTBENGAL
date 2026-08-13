@@ -2,7 +2,7 @@
 // no new component required.
 export const PAGES = {
   engagements: {
-    path: '/engagements',
+    path: '/calendar',
     hero: { eyebrow:'Engagements', t:'purple', accent:'magenta',
       title:'Twelve months. Thirteen engagements.',
       intro:'One major engagement every month from the Curtain Raiser in November 2026 to the Grand Summit in November 2027. Each feeds the same investor pipeline.',
@@ -24,7 +24,7 @@ export const PAGES = {
   },
 
   msme: {
-    path: '/msme',
+    path: '/msme-odop',
     hero: { eyebrow:'MSME & Enterprise', t:'magenta', accent:'orange',
       title:'Everything your enterprise needs, in one place.',
       intro:'Registration, certification, finance, packaging, e-commerce onboarding and buyer connect — delivered through clinics at every regional summit and online year-round.',
@@ -46,7 +46,7 @@ export const PAGES = {
   },
 
   partners: {
-    path: '/partners',
+    path: '/chambers-partners',
     hero: { eyebrow:'Partners', t:'blue', accent:'green',
       title:'Chambers, councils and countries.',
       intro:'National chambers, state bodies, sector councils, export promotion councils and foreign missions — each with a named engagement track through the twelve-month campaign.',
@@ -83,7 +83,7 @@ export const PAGES = {
   },
 
   grid: {
-    path: '/grid',
+    path: '/investment-grid',
     hero: { eyebrow:'For investors', t:'orange', accent:'purple',
       title:'Two hundred and forty-seven opportunities. One place.',
       intro:'Filter by sector, district, industrial park, infrastructure or investment size. Shortlist projects, request a meeting with the nodal department, and track your file to grounding.',
@@ -92,7 +92,7 @@ export const PAGES = {
     sections: [{
       eyebrow:'Five ways to search', t:'orange', title:'How do you want to explore?', cols:3,
       items:[
-        {eyebrow:'01', t:'orange',  title:'By sector', desc:'Fourteen priority sectors across five strategic clusters.', meta:'Browse sectors', to:'/opportunities'},
+        {eyebrow:'01', t:'orange',  title:'By sector', desc:'Fourteen priority sectors across five strategic clusters.', meta:'Browse sectors', to:'/sectors'},
         {eyebrow:'02', t:'magenta', title:'By district', desc:'Twenty-three district profiles with industrial base, infrastructure and nodal officer.', meta:'Browse districts', to:'/districts'},
         {eyebrow:'03', t:'blue',    title:'By industrial park', desc:'Thirty-one parks with parcel-level availability and utility readiness.', meta:'Browse parks', to:'/industrial-parks'},
         {eyebrow:'04', t:'purple',  title:'By infrastructure', desc:'Filter on port access, freight corridor, sanctioned power and airport distance.'},
