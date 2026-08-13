@@ -73,13 +73,14 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 
 /* ---------- Hero (node 2075:7261) ---------- */
 .hero{position:relative;overflow:hidden;min-height:693px;display:flex;flex-direction:column;justify-content:center}
-/* Placeholder ground: the design uses a photographic plate (solar farm at
-   sunset + cutout portraits). Those assets could not be downloaded — see
-   README note. Gradient below approximates the plate's tonal range. */
+/* Ground: the design uses a photographic plate (solar farm at sunset with
+   two cutout portraits). Those raster assets could not be downloaded, so the
+   sky gradient stands in for them. The petal artwork over it IS part of the
+   design and is redrawn here as vector. */
 .hero-bg{position:absolute;inset:0;background:
-  radial-gradient(120% 90% at 78% 22%, rgba(245,147,31,.42) 0%, rgba(245,147,31,0) 55%),
-  radial-gradient(90% 80% at 96% 60%, rgba(230,43,124,.30) 0%, rgba(230,43,124,0) 60%),
   linear-gradient(180deg,#dfe7ea 0%,#f2e4d2 46%,#e9d9c4 74%,#cbb9a4 100%)}
+.hero-art{position:absolute;inset-block:0;right:0;width:52%;pointer-events:none}
+.hero-art svg{height:100%;width:100%}
 .hero-inner{position:relative;padding-block:64px}
 .hero .eyebrow{color:var(--magenta);letter-spacing:.14em}
 .hero h1{font-size:68px;font-weight:800;line-height:1.02;letter-spacing:-.03em;margin-top:22px;max-width:640px}
@@ -148,9 +149,12 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 .mapcard{background:#232529;border-radius:16px;padding:24px;min-height:290px;display:flex;flex-direction:column}
 .mapcard .eyebrow{color:rgba(255,255,255,.62)}
 .mapcard .sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px}
-.mapshape{flex:1;margin-top:14px;border-radius:12px;
-  background:radial-gradient(60% 60% at 55% 45%,rgba(197,143,232,.55),rgba(197,143,232,.16) 70%,transparent 78%);
-  display:flex;align-items:center;justify-content:center;font-size:11px;color:rgba(255,255,255,.42);text-align:center;padding:12px}
+.mapshape{flex:1;margin-top:14px;border-radius:12px;position:relative;overflow:hidden;
+  border:1px dashed rgba(255,255,255,.16);
+  background-image:radial-gradient(rgba(197,143,232,.30) 1px,transparent 1px);
+  background-size:14px 14px;
+  display:flex;align-items:flex-end;justify-content:flex-start;padding:14px}
+.mapshape span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45)}
 
 /* ---------- Campaign timeline (node 5:10) ---------- */
 .timeline{background:#fff;border-block:1px solid var(--line)}
@@ -293,6 +297,32 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
 <!-- 3 · Hero (Carousel) -->
 <section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
+  <!-- Petal artwork — the brand motif that sits behind the portraits in the
+       design. Vector, so it is reproduced rather than placeheld. -->
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 620 693" preserveAspectRatio="xMaxYMid slice">
+      <defs>
+        <linearGradient id="pA" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#F5931F" stop-opacity=".30"/>
+          <stop offset="1" stop-color="#F5931F" stop-opacity=".78"/>
+        </linearGradient>
+        <linearGradient id="pB" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#E62B7C" stop-opacity=".22"/>
+          <stop offset="1" stop-color="#E62B7C" stop-opacity=".55"/>
+        </linearGradient>
+        <linearGradient id="pC" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stop-color="#6B4FB8" stop-opacity=".20"/>
+          <stop offset="1" stop-color="#6B4FB8" stop-opacity=".48"/>
+        </linearGradient>
+      </defs>
+      <!-- Large petal, cropped by the right edge -->
+      <path fill="url(#pA)" d="M120 693C120 350 300 90 610 60c-18 372-208 633-490 633Z"/>
+      <!-- Mid petal -->
+      <path fill="url(#pC)" d="M330 693c0-300 120-500 300-560-10 330-120 560-300 560Z"/>
+      <!-- Outer petal -->
+      <path fill="url(#pB)" d="M470 693c0-250 60-430 150-500-4 280-52 470-150 500Z"/>
+    </svg>
+  </div>
   <div class="shell hero-inner">
     <p class="eyebrow">West Bengal Investment Summit &nbsp;·&nbsp; November 2027</p>
     <h1>A brilliant future,<br />built together.</h1>
@@ -453,7 +483,7 @@ button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
       <p class="eyebrow">Interactive district map</p>
       <p class="sub">23 districts · tap to filter</p>
       <!-- District map is a Figma vector export; asset download blocked. -->
-      <div class="mapshape">District map artwork — pending asset export</div>
+      <div class="mapshape"><span>District map — pending asset export</span></div>
     </aside>
   </div>
 </section>
