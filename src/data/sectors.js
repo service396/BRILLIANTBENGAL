@@ -1,0 +1,16 @@
+export const SECTORS = [
+  { slug:'electric-vehicles', name:'Electric Vehicles', cluster:'Future Manufacturing', t:'orange' },
+  { slug:'renewable-energy', name:'Renewable Energy & Solar', cluster:'Green & Sustainable', t:'green' },
+  { slug:'semiconductors', name:'Semiconductors', cluster:'Future Manufacturing', t:'orange' },
+  { slug:'electronics', name:'Electronics Manufacturing', cluster:'Future Manufacturing', t:'orange' },
+  { slug:'aerospace-defence', name:'Aerospace & Defence', cluster:'Future Manufacturing', t:'orange' },
+  { slug:'textiles', name:'Textiles & Apparel', cluster:'Industrial & Trade', t:'blue' },
+  { slug:'food-processing', name:'Food Processing', cluster:'Industrial & Trade', t:'blue' },
+  { slug:'logistics', name:'Logistics & Warehousing', cluster:'Industrial & Trade', t:'blue' },
+  { slug:'it-ites', name:'IT & ITeS', cluster:'Digital & Knowledge', t:'purple' },
+  { slug:'ai-deep-tech', name:'AI & Deep Tech', cluster:'Digital & Knowledge', t:'purple' },
+  { slug:'biotech', name:'Biotechnology & Pharma', cluster:'Digital & Knowledge', t:'purple' },
+  { slug:'tourism', name:'Tourism & Hospitality', cluster:'Inclusive Enterprise', t:'magenta' },
+  { slug:'chemicals', name:'Chemicals & Petrochemicals', cluster:'Industrial & Trade', t:'blue' },
+  { slug:'msme-startups', name:'MSME & Start-ups', cluster:'Inclusive Enterprise', t:'magenta' },
+]
