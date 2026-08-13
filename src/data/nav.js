@@ -17,32 +17,39 @@ export const UTILITY = {
   facilitationDesk: { label: 'FACILITATION DESK', to: '/facilitation-desk' },
   languages: ['বাংলা', 'ENGLISH'],
   textSizes: ['A−', 'A', 'A+'],
-  logIn: { label: 'LOG IN', to: '/login' },
+  logIn: { label: 'LOG IN', to: '/account' },
 }
 
 export const FOOTER = [
-  { heading: 'Why Bengal',   links: [
-    { label: 'Investment advantage', to: '/why-bengal' },
-    { label: 'Economic corridors',   to: '/why-bengal' },
-    { label: 'Infrastructure',       to: '/why-bengal' },
-    { label: 'Policy & facilitation',to: '/policies' },
+  { heading: 'The Summit', links: [
+    { label: 'Campaign overview',  to: '/summit' },
+    { label: 'Curtain Raiser 2026', to: '/summit/curtain-raiser' },
+    { label: 'Grand Summit 2027',  to: '/summit/grand-summit-2027' },
+    { label: 'Why Bengal',         to: '/why-bengal' },
   ]},
-  { heading: 'Opportunities', links: [
-    { label: 'Bengal Investment Grid', to: '/investment-grid' },
-    { label: 'Priority sectors',       to: '/sectors' },
-    { label: 'District opportunities', to: '/districts' },
-    { label: 'Industrial parks',       to: '/industrial-parks' },
+  { heading: 'Participate', links: [
+    { label: 'Investor registration', to: '/register/investor' },
+    { label: 'MSME registration',     to: '/register/msme' },
+    { label: 'Exhibitor & sponsor',   to: '/register/exhibitor' },
+    { label: 'Media accreditation',   to: '/register/media' },
   ]},
-  { heading: 'Engagements', links: [
-    { label: 'Campaign calendar', to: '/calendar' },
-    { label: 'Regional summits',  to: '/calendar' },
-    { label: 'Roadshows',         to: '/calendar' },
-    { label: 'Grand Summit 2027', to: '/grand-summit' },
+  { heading: 'Resources', links: [
+    { label: 'Investment Grid',      to: '/investment-grid' },
+    { label: 'Sector profiles',      to: '/sectors' },
+    { label: 'Policies & incentives', to: '/policies' },
+    { label: 'Downloads',            to: '/downloads' },
   ]},
-  { heading: 'MSME & Partners', links: [
-    { label: 'Register your MSME',    to: '/register' },
-    { label: 'Certification clinics', to: '/msme-odop' },
-    { label: 'ODOP directory',        to: '/odop-directory' },
-    { label: 'Chambers & councils',   to: '/chambers-partners' },
+  { heading: 'Facilitation Desk', links: [
+    { label: 'Nodal officers',        to: '/facilitation-desk' },
+    { label: 'Single-window portal',  to: '/single-window' },
+    { label: 'Contact us',            to: '/contact' },
+    { label: 'FAQ',                   to: '/faq' },
   ]},
+]
+
+export const LEGAL = [
+  { label: 'Accessibility', to: '/accessibility' },
+  { label: 'RTI',           to: '/accessibility' },
+  { label: 'Privacy',       to: '/accessibility' },
+  { label: 'Terms',         to: '/accessibility' },
 ]

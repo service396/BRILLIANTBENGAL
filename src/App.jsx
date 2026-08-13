@@ -3,12 +3,22 @@ import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Home from './pages/Home.jsx'
-import WhyBengal from './pages/WhyBengal.jsx'
-import Opportunities from './pages/Opportunities.jsx'
-import SectorDetail from './pages/SectorDetail.jsx'
-import Simple from './pages/Simple.jsx'
+import GenericPage from './pages/GenericPage.jsx'
+import SectorsBoard, { SectorsAZ } from './pages/SectorsBoard.jsx'
+import Calendar from './pages/Calendar.jsx'
+import InvestmentGrid from './pages/InvestmentGrid.jsx'
 import NotFound from './pages/NotFound.jsx'
-import { PAGES } from './data/pages.js'
+import { PAGES } from './data/site.js'
+
+// Routes with hand-built components. Everything else in PAGES is rendered by
+// GenericPage, so adding a page to the design data adds a working route.
+const BESPOKE = {
+  '/': Home,
+  '/sectors': SectorsBoard,
+  '/sectors/all': SectorsAZ,
+  '/calendar': Calendar,
+  '/investment-grid': InvestmentGrid,
+}
 
 export default function App() {
   return (
@@ -17,13 +27,15 @@ export default function App() {
       <Header />
       <main id="main" className="flex-1">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/why-bengal" element={<WhyBengal />} />
-          <Route path="/sectors" element={<Opportunities />} />
-          <Route path="/sectors/:slug" element={<SectorDetail />} />
-          {Object.entries(PAGES).map(([key, p]) => (
-            <Route key={key} path={p.path} element={<Simple {...p} />} />
-          ))}
+          {Object.keys(BESPOKE).map((path) => {
+            const C = BESPOKE[path]
+            return <Route key={path} path={path} element={<C />} />
+          })}
+          {Object.keys(PAGES)
+            .filter((route) => !BESPOKE[route])
+            .map((route) => (
+              <Route key={route} path={route} element={<GenericPage route={route} />} />
+            ))}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
